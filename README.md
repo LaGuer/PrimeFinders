@@ -15,7 +15,7 @@ To install the package use pip:
 
 ## Introduction
 
-Some algorithm on prime numbers. You can find all the functions in the file `nprime/pryprime.py`
+Some algorithm on prime numbers. You can find all the functions in the file `primefinders/`
 
 In this release the Algorithm uses : 
 
