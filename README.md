@@ -1,1 +1,3 @@
 # PrimeFinders
+
+pip install primefinders
