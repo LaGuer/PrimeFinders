@@ -4,14 +4,14 @@ import time
 import random                       # for coming up with random numbers
 from multiprocessing import Pool    # for pooling answers
 from setuptools import setup, find_packages
-from nprime.toolbox import convert
+from primefinders.toolkit import convert
 
 
 LONG_DESCRIPTION = convert("README.md")
 
 setup(name='primefinders',
       version='0.0.1',
-      description='Python library to determine prime numbers',
+      description='Python library identifying prime numbers',
       long_description=LONG_DESCRIPTION,
       author='LaGuer',
       url='https://github.com/LaGuer/PrimeFinders',
@@ -20,6 +20,11 @@ setup(name='primefinders',
       install_requires=['matplotlib>=2.1'],
       keywords=['prime',
                 'fermat',
+                'euler',
+                'galois',
+                'miller',
+                'poincare',
+                'riemann',
                 'math'],
       packages=find_packages(),
       package_data={
@@ -28,7 +33,7 @@ setup(name='primefinders',
       },
       platforms='any',
       zip_safe=False,
-      test_suite='tests.test_pyprime',
+      test_suite='tests.test_primefinders',
       classifiers=[
           "Development Status :: 5 - Production/Stable",
           "Programming Language :: Python",
