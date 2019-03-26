@@ -6,6 +6,13 @@
  [![codecov](https://codecov.io/gh/LaGuer/primefinders/branch/master/graph/badge.svg)](https://codecov.io/gh/LaGuer/primefinders) 
  [![Codacy Badge](https://api.codacy.com/project/badge/Grade/)](https://www.codacy.com/app/LaGuer/primefinders?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LaGuer/primefinders&amp;utm_campaign=Badge_Grade)
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LaGuer/PrimeFinders/master)
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/laguer/PrimeFinders/blob/master/PrimeFinders.ipynb)
+
+[![nbviewer](https://img.shields.io/badge/view%20on-nbviewer-brightgreen.svg)](https://nbviewer.jupyter.org/github/LaGuer/PrimeFinders/blob/master/PrimeFinders.ipynb)
+
+
 ## Installation
 
 To install the package use pip:
