@@ -16,7 +16,7 @@ def getResult():
     try:
         n = input("Give:")      # asks user for the number n
         if n < 0:
-            print "Please give a positive input."
+            print("Please give a positive input.")
             SystemExit(-3)
     except Exception as e:
         print "Input not accepted."
@@ -36,19 +36,19 @@ def getResult():
                 break
 
         if test != 1:
-            print "This number is not prime!"
+            print("This number is not prime!")
         elif test == 1:
-            print "This number is prime!"
+            print("This number is prime!")
         elapsed_time = time.time() - start_time
-        print "Realtime elapsed:", elapsed_time, "sec"
+        print("Realtime elapsed:", elapsed_time, "sec")
         return 0
 
     else:                               # code for >=100000 numbers
         test = calculate(n)             # Calls function for parallel calculation of the result
         if test != 1:
-            print "This number is not prime!"
+            print("This number is not prime!")
         elif test == 1:
-            print "This number is probably prime!"
+            print("This number is probably prime!")
         elapsed_time = time.time() - start_time
         print "Realtime elapsed:", elapsed_time, "sec"
         return 1
@@ -224,7 +224,7 @@ def calculate(n):
             print "100%"
             loop_flag = False  # This flag as false signals the end of the 40 calculations
         except multiprocessing.TimeoutError as e:
-            print "Timeout Error.Increasing quantum...\n", e.message
+            print("Timeout Error.Increasing quantum...\n", e.message)
             quantum += 60
 
     for i in range(1, index):
@@ -236,7 +236,7 @@ def calculate(n):
     try:
         pool.close()
     except AssertionError as e:
-        print "Failed to free Pool obj.", e.message
+        print("Failed to free Pool obj.", e.message)
 
     return 1
 
@@ -254,11 +254,11 @@ def check_complex(mod):  # 1-> Could be prime | 0->NOT a prime
         return 1
 
 def main():
-    print "**PrimeFinders v0.0.1**"
-    print 'Process Id:', os.getpid()
-    print "Cores: ", multiprocessing.cpu_count()
+    print("**PrimeFinders v0.0.1**")
+    print('Process Id:', os.getpid())
+    print("Cores: ", multiprocessing.cpu_count())
     ex_code = getResult()
-    print "EXIT CODE: ", ex_code
+    print("EXIT CODE: ", ex_code)
 
 
 if __name__ == '__primefinders__':
