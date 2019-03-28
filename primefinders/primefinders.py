@@ -132,7 +132,7 @@ def calculate(n):
             answer.append(val4)
 
             if check_complex(val1) == 0 or check_complex(val2) == 0 or check_complex(val3) == 0 or check_complex(val4) == 0:
-                print "100%"
+                print("100%")
                 return 0
 
             val5 = result5.get(timeout=quantum)
@@ -148,7 +148,7 @@ def calculate(n):
             answer.append(val8)
 
             if check_complex(val5) == 0 or check_complex(val6) == 0 or check_complex(val7) == 0 or check_complex(val8) == 0:
-                print "100%"
+                print("100%")
                 return 0
 
             val9 = result9.get(timeout=quantum)
@@ -157,7 +157,7 @@ def calculate(n):
             val10 = result10.get(timeout=quantum)
             answer.append(val10)
 
-            print "25%"
+            print("25%")
 
             #
             val11 = result11.get(timeout=quantum)
@@ -167,7 +167,7 @@ def calculate(n):
             answer.append(val12)
 
             if check_complex(val9) == 0 or check_complex(val10) == 0 or check_complex(val11) == 0 or check_complex(val12) == 0:
-                print "100%"
+                print("100%")
                 return 0
 
             val13 = result13.get(timeout=quantum)
@@ -184,7 +184,7 @@ def calculate(n):
 
             if check_complex(val13) == 0 or check_complex(val14) == 0 or check_complex(val15) == 0 or check_complex(
                     val16) == 0:
-                print "100%"
+                print("100%")
                 return 0
 
             val17 = result17.get(timeout=quantum)
@@ -199,14 +199,14 @@ def calculate(n):
             val20 = result20.get(timeout=quantum)
             answer.append(val20)
 
-            print "50%"
+            print("50%")
 
             val21 = result21.get(timeout=quantum)
             answer.append(val21)
 
             if check_complex(val7) == 0 or check_complex(val18) == 0 or check_complex(val19) == 0 or check_complex(
                     val20) == 0 or check_complex(val21) == 0:
-                print "100%"
+                print("100%")
                 return 0
 
             # The values are not check from now on (p=0.5)
@@ -220,7 +220,7 @@ def calculate(n):
             answer.append(result28.get(timeout=quantum))
             answer.append(result29.get(timeout=quantum))
             answer.append(result30.get(timeout=quantum))
-            print "75%"
+            print("75%")
             answer.append(result31.get(timeout=quantum))
             answer.append(result32.get(timeout=quantum))
             answer.append(result33.get(timeout=quantum))
@@ -231,7 +231,7 @@ def calculate(n):
             answer.append(result38.get(timeout=quantum))
             answer.append(result39.get(timeout=quantum))
             answer.append(result40.get(timeout=quantum))
-            print "100%"
+            print("100%")
             loop_flag = False  # This flag as false signals the end of the 40 calculations
         except multiprocessing.TimeoutError as e:
             print("Timeout Error.Increasing quantum...\n", e.message)
