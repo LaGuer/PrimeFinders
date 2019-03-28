@@ -111,7 +111,7 @@ def calculate(n):
     result38 = pool.apply_async(fermat, [n])
     result39 = pool.apply_async(fermat, [n])
     result40 = pool.apply_async(fermat, [n])
-    print "Pool filled successfully\n"
+    print("Pool filled successfully\n")
 
     # idx = 1
     loop_flag = True  # When this is true it is still calculating the answers
