@@ -60,7 +60,7 @@ def getResult():
         elif test == 1:
             print("This number is probably prime!")
         elapsed_time = time.time() - start_time
-        print "Realtime elapsed:", elapsed_time, "sec"
+        print("Realtime elapsed:", elapsed_time, "sec")
         return 1
 
 
