@@ -30,7 +30,8 @@ def getResult():
             SystemExit(-3)
     except Exception as e:
         print("Input not accepted.")
-        print(e.message)
+        print(input)
+#        print(e.message)
         SystemExit(-2)
     print("You gave:", n)
 
