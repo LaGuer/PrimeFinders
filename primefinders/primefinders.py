@@ -19,10 +19,10 @@ def getResult():
             print("Please give a positive input.")
             SystemExit(-3)
     except Exception as e:
-        print "Input not accepted."
-        print e.message
+        print("Input not accepted.")
+        print(e.message)
         SystemExit(-2)
-    print "You gave:", n
+    print("You gave:", n)
 
     start_time = time.time()
 
