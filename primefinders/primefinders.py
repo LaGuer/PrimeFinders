@@ -10,6 +10,16 @@ import time
 import random                       # for coming up with random numbers
 from multiprocessing import Pool    # for pooling answers
 
+
+
+
+def about():
+    print("\'primefinders.getResult(n)\' returns \'True\' if \'n\' getResult")
+    print("\'primefinders.calculate(n)\' calculate \'n\'")
+    print("\'primefinders.fermat(n)\' returns all the prime factors of \'n\' with fermat")
+    print("\'primefinders.check_complex(n)\' returns first \'n\' check_complex")
+
+
 def getResult():
     test = -1
 
@@ -253,7 +263,7 @@ def check_complex(mod):  # 1-> Could be prime | 0->NOT a prime
     else:
         return 1
 
-def main():
+def primefinders():
     print("**PrimeFinders v0.0.1**")
     print('Process Id:', os.getpid())
     print("Cores: ", multiprocessing.cpu_count())
