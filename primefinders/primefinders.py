@@ -117,7 +117,7 @@ def calculate(n):
     loop_flag = True  # When this is true it is still calculating the answers
     while quantum < 600 and loop_flag:  # This allows the program to collapse after 10 minutes have passed
         try:
-            print "**Progression**"
+            print("**Progression**")
             #
             val1 = result1.get(timeout=quantum)
             answer.append(val1)
