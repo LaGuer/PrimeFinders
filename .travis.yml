@@ -104,7 +104,6 @@ before_deploy:
   - rm -rf dist/
   - python run_notebooks.py
 
-
 deploy:
   provider: releases
   api_key:
@@ -125,61 +124,3 @@ deploy:
     secure: 
   on:
     tags: true
-
-
-
-
-
-
-
-
-
-
-
-
-
-language: python
-
-sudo: false
-
-notifications:
-   email: false
-
-#For Pypandoc can work, pandoc needs to be installed
-addons:
-  apt_packages:
-    - pandoc
-
-python:
-  - 3.6
-
-env:
-  global:
-  - secure: =
-  - secure: =
-
-before_install:
-  - pip install -U pip
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
-
-# command to install dependencies
-install:
-  - pip install -r requirements.txt
-  - python setup.py install
-
-# commands to run tests
-script:
-  - coverage run --source=primefinders -m unittest
-  - coverage xml # For Codacy
-
-deploy:
-  provider: pypi
-  user: LaGuer
-  password:
-    secure: 
-  on:
-    tags: true
-
-after_success:
