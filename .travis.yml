@@ -63,8 +63,8 @@ script:
       python setup.py install
       make -C docs/ html SPHINXOPTS="-W"
     fi
-  - coverage run --source=primefinders -m unittest
-  - coverage xml # For Codacy    
+#  - coverage run --source=primefinders -m unittest
+#  - coverage xml # For Codacy    
     
 after_success:
   - cp /tmp/ipy_coverage.xml ./
@@ -123,4 +123,4 @@ deploy:
   password:
     secure: 
   on:
-    tags: true
+    tags: false
