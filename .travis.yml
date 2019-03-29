@@ -8,6 +8,7 @@ addons:
       - pandoc
 
 python:
+    - 3.8
     - 3.6
     - 3.5
 
@@ -58,7 +59,7 @@ script:
   - ls && pwd -
   # On the latest Python (on Linux) only, make sure that the docs build.
   - |
-    if [[ "$TRAVIS_PYTHON_VERSION" == "3.7" ]] && [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+    if [[ "$TRAVIS_PYTHON_VERSION" == "3.8" ]] && [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       make -C docs/ html SPHINXOPTS="-W"
     fi
 #  - coverage run --source=primefinders -m unittest
@@ -75,7 +76,7 @@ after_success:
 
 matrix:
   include:
-    - python: "3.7"
+    - python: "3.8"
       dist: disco
       sudo: true
     - python: "3.7"
