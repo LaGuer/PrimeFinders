@@ -59,8 +59,8 @@ script:
   # On the latest Python (on Linux) only, make sure that the docs build.
   - |
     if [[ "$TRAVIS_PYTHON_VERSION" == "3.7" ]] && [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      pip install -r requirements.txt
-      python setup.py install
+#      pip install -r requirements.txt
+#      python setup.py install
       make -C docs/ html SPHINXOPTS="-W"
     fi
 #  - coverage run --source=primefinders -m unittest
