@@ -68,8 +68,8 @@ script:
     
 after_success:
   - cp *.html ./
-  - ls && cd docs
-  - cp *.* ./
+  - ls && cd ..
+  - cp *.* docs
   - cp /tmp/.coverage ./
   - pip install primefinders
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT    # Code Climate code coverage
