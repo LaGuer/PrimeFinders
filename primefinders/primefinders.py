@@ -9,6 +9,7 @@ import multiprocessing
 import time
 import random                       # for coming up with random numbers
 from multiprocessing import Pool    # for pooling answers
+from math import sqrt
 
 def about():
     print("\'primefinders.check(n)\' returns \'True\' if \'n\' is a prime number")
@@ -18,11 +19,11 @@ def about():
     print("\'primefinders.upto(n)\' returns all the primes less than or equal to \'n\'")
     print("\'primefinders.between(m,n)\' returns all the primes between \'m\' and \'n\'")
     print("\'primefinders.phi(n)\' returns the Euler's phi(n)")
-    print("\'primefinders.phi(n)\' the number of integers less than n which have no common factor")
+    print("\'primefinders.lcg(n)\' example of Linear Congruential  Generator")
     print("\'primefinders.getResult(n)\' returns \'True\' if \'n\' getResult")
-    print("\'primefinders.calculate(n)\' calculate whether \'n\' is prime")
-    print("\'primefinders.fermat(n)\' returns whether \'n\' is prime using fermat")
-    print("\'primefinders.check_complex(n)\' returns whether \'n\' is complex")
+    print("\'primefinders.calculate(n)\' returns 1 if \'n\' is prime")
+    print("\'primefinders.fermat(n)\' returns 1 if \'n\' is prime using fermat a ** (n - 1)) % n)")
+    print("\'primefinders.check_complex(n)\' returns 1 if \'n\' might be prime it said to be complex")
 
 #Calculates the lowest prime factor by default
 def factor(num):
@@ -30,7 +31,7 @@ def factor(num):
         return 2
     else:
         for i in range(3, int(sqrt(num))+1, 2): #I could iteratte over a list of primes
-            if num%i==0: #But creating that list of primes turns out even more inensive task
+            if num%i==0: #But creating that list of primes turns out even with more intensive task
                 return i 
         else:
             return num
