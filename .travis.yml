@@ -8,7 +8,6 @@ addons:
       - pandoc
 
 python:
-    - 3.8.0a2
     - 3.6
     - 3.5
 
@@ -69,7 +68,8 @@ script:
     
 after_success:
   - cp *.html ./
-  - cp /tmp/ipy_coverage.xml ./
+  - ls && cd docs
+  - cp *.* ./
   - cp /tmp/.coverage ./
   - pip install primefinders
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT    # Code Climate code coverage
@@ -79,7 +79,7 @@ after_success:
 
 matrix:
   include:
-    - python: "3.8.0a2"
+    - python: "3.8-dev"
       dist: disco
       sudo: true
     - python: "3.7"
@@ -93,8 +93,8 @@ matrix:
       sudo: true
     - os: osx
       language: generic
-      python: 3.8.0a2
-      env: TRAVIS_PYTHON_VERSION=3.8.0a2
+      python: 3.8
+      env: TRAVIS_PYTHON_VERSION=3.8
     - os: osx
       language: generic
       python: 3.6
@@ -105,7 +105,7 @@ matrix:
       env: TRAVIS_PYTHON_VERSION=3.7
   allow_failures:
     - python: nightly
-    - python: 3.8.0a2
+    - python: 3.8
 
 before_deploy:
   - rm -rf dist/
