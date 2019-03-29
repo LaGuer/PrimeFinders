@@ -39,7 +39,7 @@ Future Algorithms will use :
 
 ## Specifications
 
-- Language: Python **3.6** 
+- Language: Python **3.6** (also works on 3.5 and 3.7)
 - Package:
 	- Basic python packages were preferred
 	- Matplotlib v2.0 - graph and math
@@ -79,10 +79,17 @@ Prime probability is right is `1 - 1/(2^t)`
 Returns a boolean: True if `n` passes the tests.
 
 ```python
-from PrimeFinders.pyprime import fermat
+With (n)
+
+from primefinders import primefinders
+
+primefinders.about()
+
+primefinders.calculate(1697)
 
 # With n the number you want to test
 fermat(n)
+primefinders.fermat(1697)
 ```
 
 #### Theory
@@ -92,8 +99,7 @@ If `n` is prime then `∀ a ∈[1, ..., n-1]`
 ```
     a^(n-1) ≡ 1 (mod n) ⇔ a^(n-1) = kn + 1
 ```
-    
-### Erathostene's Sieve
+### Lucas-Lehmer
 
 #### How to use
 
@@ -103,7 +109,28 @@ It returns a dictionary:
   - the value is the list of composites of these primes up to n
 
 ```python
-from PrimeFinders.pyprime import sieve_eratosthenes
+from primefinders import toolkit
+>>>
+
+from primefinders import lucas_lehmer
+
+# With as a parameter the upper limit
+lucas_lehmer(10)
+>>> 
+```
+
+### Sieve of Eratosthenes
+
+#### How to use
+
+Implementation of the sieve of erathostenes that discover the primes and their composite up to a limit.
+It returns a dictionary:
+  - the key are the primes up to n
+  - the value is the list of composites of these primes up to n
+
+```python
+
+from primefinders import sieve_eratosthenes
 
 # With as a parameter the upper limit
 sieve_eratosthenes(10)
