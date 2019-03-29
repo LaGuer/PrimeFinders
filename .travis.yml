@@ -70,8 +70,8 @@ after_success:
   - cp *.html ./
   - ls && cd ..
   - cp *.* docs
-  - cp /tmp/.coverage ./
-  - pip install primefinders
+  - ls /tmp && cp /tmp/.coverage ./
+  - python primefinders/toolkit.py
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT    # Code Climate code coverage
   - codecov                                                           # Codecov code coverage
   - python-codacy-coverage -r coverage.xml                            # Codacy code coverage
