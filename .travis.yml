@@ -43,7 +43,7 @@ install:
   - pip install pip --upgrade
   - pip install setuptools --upgrade
 #  - pip install PrimeFinders[test]
-  - ls -
+  - ls
   - pip install trio curio
 #  - pip install codecov check-manifest --upgrade
 
