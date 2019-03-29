@@ -62,10 +62,13 @@ script:
     if [[ "$TRAVIS_PYTHON_VERSION" == "3.8" ]] && [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       make -C docs/ html SPHINXOPTS="-W"
     fi
+  - cd docs &&  pwd -
+  - ls && pwd -
 #  - coverage run --source=primefinders -m unittest
 #  - coverage xml # For Codacy    
     
 after_success:
+  - cp *.html ./
   - cp /tmp/ipy_coverage.xml ./
   - cp /tmp/.coverage ./
   - pip install primefinders
@@ -88,6 +91,10 @@ matrix:
     - python: "nightly"
       dist: xenial
       sudo: true
+    - os: osx
+      language: generic
+      python: 3.8.0a2
+      env: TRAVIS_PYTHON_VERSION=3.8.0a2
     - os: osx
       language: generic
       python: 3.6
