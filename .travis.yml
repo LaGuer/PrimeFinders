@@ -43,7 +43,7 @@ before_install:
 install:
   - pip install pip --upgrade
   - pip install setuptools --upgrade
-  - pip install primefinders[test] --upgrade
+  - pip install git+https://github.com/LaGuer/PrimeFinders.git[test] --upgrade
   - pip install trio curio
 #  - pip install codecov check-manifest --upgrade
 
