@@ -5,7 +5,7 @@ os: linux
 addons:
   apt:
     packages:
-      - graphviz
+      - matplotlib
       - pandoc
 
 python:
@@ -43,7 +43,7 @@ before_install:
 install:
   - pip install pip --upgrade
   - pip install setuptools --upgrade
-  - pip install git+https://github.com/LaGuer/PrimeFinders.git[test] --upgrade
+  - pip install primefinders[test]
   - pip install trio curio
 #  - pip install codecov check-manifest --upgrade
 
