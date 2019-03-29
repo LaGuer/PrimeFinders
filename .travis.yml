@@ -43,7 +43,7 @@ deploy:
     tags: true
 
 after_success:
-  - pip install nprime
+  - pip install primefinders
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT    # Code Climate code coverage
   - codecov                                                           # Codecov code coverage
   - python-codacy-coverage -r coverage.xml                            # Codacy code coverage
