@@ -118,9 +118,9 @@ deploy:
     python: 3.6  # Any version should work, but we only need one
     condition: $TRAVIS_OS_NAME = "linux"
 
-  provider: pypi
-  user: LaGuer
-  password:
-    secure: 
-  on:
-    tags: false
+#  provider: pypi
+#  user: LaGuer
+#  password:
+#    secure: 
+#  on:
+#   tags: false
