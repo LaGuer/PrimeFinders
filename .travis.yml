@@ -45,7 +45,7 @@ install:
 #  - pip install PrimeFinders[test]
   - ls
   - pip install trio curio
-#  - pip install codecov check-manifest --upgrade
+  - pip install codecov check-manifest --upgrade
 
 script:
 #  - check-manifest
@@ -63,13 +63,13 @@ script:
     fi
   - cd docs &&  pwd -
   - ls && pwd -
-#  - coverage run --source=primefinders -m unittest
+  - coverage run --source=primefinders -m unittest
 #  - coverage xml # For Codacy    
     
 after_success:
   - cp *.html ./
-  - ls && cd ..
-  - cp *.* docs
+  - ls && cd -
+  - cp *.* docs/ && ls docs/
   - ls /tmp && cp /tmp/.coverage ./
   - python primefinders/toolkit.py
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT    # Code Climate code coverage
