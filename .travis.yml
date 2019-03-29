@@ -64,6 +64,7 @@ script:
   - cd docs &&  pwd -
   - ls && pwd -
   - coverage run --source=primefinders -m unittest
+  - coverage run tests.py
 #  - coverage xml # For Codacy    
     
 after_success:
