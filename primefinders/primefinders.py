@@ -10,19 +10,104 @@ import time
 import random                       # for coming up with random numbers
 from multiprocessing import Pool    # for pooling answers
 
-
-
-
 def about():
+    print("\'primefinders.check(n)\' returns \'True\' if \'n\' is a prime number")
+    print("\'primefinders.factor(n)\' returns the lowest prime factor of \'n\'")
+    print("\'primefinders.factors(n)\' returns all the prime factors of \'n\' with multiplicity")
+    print("\'primefinders.first(n)\' returns first \'n\' many primes")
+    print("\'primefinders.upto(n)\' returns all the primes less than or equal to \'n\'")
+    print("\'primefinders.between(m,n)\' returns all the primes between \'m\' and \'n\'")
+    print("\'primefinders.phi(n)\' returns the Euler's phi(n)")
+    print("\'primefinders.phi(n)\' the number of integers less than n which have no common factor")
     print("\'primefinders.getResult(n)\' returns \'True\' if \'n\' getResult")
-    print("\'primefinders.calculate(n)\' calculate \'n\'")
-    print("\'primefinders.fermat(n)\' returns all the prime factors of \'n\' with fermat")
-    print("\'primefinders.check_complex(n)\' returns first \'n\' check_complex")
+    print("\'primefinders.calculate(n)\' calculate whether \'n\' is prime")
+    print("\'primefinders.fermat(n)\' returns whether \'n\' is prime using fermat")
+    print("\'primefinders.check_complex(n)\' returns whether \'n\' is complex")
 
+#Calculates the lowest prime factor by default
+def factor(num):
+    if num==2 or num%2==0:
+        return 2
+    else:
+        for i in range(3, int(sqrt(num))+1, 2): #I could iteratte over a list of primes
+            if num%i==0: #But creating that list of primes turns out even more inensive task
+                return i 
+        else:
+            return num
+
+def check(num):
+    if factor(num)==num:
+        return True
+    else:
+        return False
+
+def factors(num):
+    fact=factor(num)
+    new_num=num//fact
+    factors=[fact]
+    while new_num!=1:
+        fact=factor(new_num)
+        factors+=[fact]
+        new_num//=fact
+    return factors
+
+def phi(num):
+    val=num
+    list=factors(num) 
+    sets=set(list) 
+    for i in sets:
+        val=(val//i)*(i-1)
+    return val
+        
+
+def __next_prime(list): 
+    if list==[2]:
+        a=3
+    else:
+        a=list[-1]+2
+        found=0 
+        while found==0: 
+            for i in list:
+                if a%i==0:
+                    a=a+1
+                    break 
+            else:
+                found=1 
+    return a
+
+
+def first(n):
+    list=[2]
+    while len(list)<n:
+        new_entry=__next_prime(list)
+        list+=[new_entry]
+    return list
+
+def upto(n):
+    list=[2]
+    while list[-1]<n: 
+        new_entry=__next_prime(list)
+        list+=[new_entry]
+    if list[-1]>n:
+        list=list[:-1] 
+    return list
+
+def between(m,n):
+    d=0
+    x=[]
+    if m%2==0:
+        d=1
+    else:
+        d=0
+    for i in range(m+d,n,2):
+        if check(i):
+            x+=[i]
+        else:
+            x=x
+    return x
 
 def getResult():
     test = -1
-
     try:
         n = input("Give:")      # asks user for the number n
         if n < 0:
