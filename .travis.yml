@@ -102,7 +102,7 @@ matrix:
 
 before_deploy:
   - rm -rf dist/
-  - python run_notebooks.py
+  - python primefinders.py
 
 deploy:
   provider: releases
