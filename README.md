@@ -2,8 +2,8 @@
 
  [![Generic badge](https://img.shields.io/badge/github-primefinders-blue.svg)](https://github.com/LaGuer/primefinders) 
  [![PyPI version](https://badge.fury.io/py/primefinders.svg)](https://badge.fury.io/py/primefinders) 
- [![Build Status](https://travis-ci.org/LaGuer/primefinders.svg?branch=master)](https://travis-ci.org/LaGuer/primefinders) 
- [![codecov](https://codecov.io/gh/LaGuer/primefinders/branch/master/graph/badge.svg)](https://codecov.io/gh/LaGuer/primefinders) 
+ [![Build Status](https://travis-ci.org/LaGuer/PrimeFinders.svg?branch=master)](https://travis-ci.org/LaGuer/PrimeFinders) 
+ [![codecov](https://codecov.io/gh/LaGuer/PrimeFinders/branch/master/graph/badge.svg)](https://codecov.io/gh/LaGuer/primefinders) 
  [![Codacy Badge](https://api.codacy.com/project/badge/Grade/)](https://www.codacy.com/app/LaGuer/primefinders?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LaGuer/primefinders&amp;utm_campaign=Badge_Grade)
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LaGuer/PrimeFinders/master)
