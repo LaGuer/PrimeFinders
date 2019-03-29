@@ -8,7 +8,7 @@ addons:
       - pandoc
 
 python:
-    - 3.8
+    - 3.8.0a2
     - 3.6
     - 3.5
 
@@ -76,7 +76,7 @@ after_success:
 
 matrix:
   include:
-    - python: "3.8"
+    - python: "3.8.0a2"
       dist: disco
       sudo: true
     - python: "3.7"
@@ -98,7 +98,7 @@ matrix:
       env: TRAVIS_PYTHON_VERSION=3.7
   allow_failures:
     - python: nightly
-    - python: 3.8
+    - python: 3.8.0a2
 
 before_deploy:
   - rm -rf dist/
