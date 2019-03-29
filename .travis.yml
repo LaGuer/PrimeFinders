@@ -38,7 +38,7 @@ before_install:
   - pip install -U pip
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
+#  - ./cc-test-reporter before-build
 
 install:
   - pip install pip --upgrade
@@ -77,6 +77,9 @@ after_success:
 
 matrix:
   include:
+    - python: "3.7"
+      dist: disco
+      sudo: true
     - python: "3.7"
       dist: xenial
       sudo: true
