@@ -1,6 +1,6 @@
 import unittest
 
-import primefinders
+from primefinders import primefinders.fermat()
 
 
 class TestMethods(unittest.TestCase):
