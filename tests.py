@@ -1,12 +1,14 @@
 import unittest
+# import the primefinders package
+import primefinders
 
-from primefinders import primefinders.fermat()
+# import the primefinders module
+from primefinders import primefinders
 
+# or an object inside the primefinders module
+from primefinders.primefinders import fermat
 
-class TestMethods(unittest.TestCase):
-    def test_add(self):
-        self.assertEqual(primefinders.fermat(1697), ":)")
-
-
-if __name__ == '__main__':
-    unittest.main()
+import unittest
+import test.all_tests
+testSuite = test.all_tests.create_test_suite()
+text_runner = unittest.TextTestRunner().run(testSuite)
