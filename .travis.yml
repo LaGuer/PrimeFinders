@@ -65,7 +65,7 @@ script:
   - ls && pwd -
   - coverage run --source=primefinders -m unittest
   - cd - && ls -lart
-  - coverage run tests.py
+  - python -m unittest discover
 #  - coverage xml # For Codacy    
     
 after_success:
