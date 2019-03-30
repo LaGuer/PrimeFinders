@@ -63,9 +63,9 @@ script:
     fi
   - cd docs &&  pwd -
   - ls && pwd -
-  - coverage run --source=primefinders -m unittest
+  - coverage run --source=primefinders -m unittest -p tests
   - cd - && ls -lart
-  - python -m unittest -p tests discover
+#  - python -m unittest -p tests discover
 #  - coverage xml # For Codacy    
     
 after_success:
