@@ -63,7 +63,7 @@ script:
     fi
   - cd docs &&  pwd -
   - ls && pwd -
-  - coverage run --source=primefinders -m unittest -p tests
+  - coverage run --source=primefinders -m unittest
   - cd - && ls -lart
 #  - python -m unittest -p tests discover
 #  - coverage xml # For Codacy    
