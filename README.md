@@ -5,6 +5,7 @@
  [![Build Status](https://travis-ci.org/LaGuer/PrimeFinders.svg?branch=master)](https://travis-ci.org/LaGuer/PrimeFinders) 
  [![codecov](https://codecov.io/gh/LaGuer/PrimeFinders/branch/master/graph/badge.svg)](https://codecov.io/gh/LaGuer/primefinders) 
  [![Codacy Badge](https://api.codacy.com/project/badge/Grade/)](https://www.codacy.com/app/LaGuer/primefinders?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LaGuer/primefinders&amp;utm_campaign=Badge_Grade)
+ [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2647719.svg)](https://doi.org/10.5281/zenodo.2647719)
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LaGuer/PrimeFinders/master)
 
