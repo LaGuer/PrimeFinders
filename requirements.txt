@@ -1,4 +1,6 @@
 matplotlib==2.1.1
+scipy
+sympy
 setuptools
 pypandoc
 coverage==4.1
