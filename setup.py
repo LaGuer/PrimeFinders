@@ -4,7 +4,7 @@ import time
 import random                       # for coming up with random numbers
 from multiprocessing import Pool    # for pooling answers
 from setuptools import setup, find_packages
-from primefinders.toolkit import convert
+#from primefinders.toolkit import convert
 
 
 LONG_DESCRIPTION = convert("README.md")
