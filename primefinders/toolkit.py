@@ -68,16 +68,18 @@ def read_advance(*filenames, **kwargs):
     return sep.join(buf)
 
 
-def convert(markdown_path):
-    """Convert a Markdown file to a reStructuredText file with the pypandoc"""
-    try:
-        import pypandoc
-        output = pypandoc.convert(markdown_path, 'rst')
-        # pypandoc.convert(markdown_path, 'rst', outputfile="README.rst") # Create the rst file
-    except(IOError, ImportError):
-        output = open(markdown_path).read()
 
-    return output
+#def convert(markdown_path):
+#    """Convert a Markdown file to a reStructuredText file with the pypandoc"""
+#    try:
+#        import pypandoc
+#        output = pypandoc.convert(markdown_path, 'rst')
+#        # pypandoc.convert(markdown_path, 'rst', outputfile="README.rst") # Create the rst file
+#    except(IOError, ImportError):
+#        output = open(markdown_path).read()
+
+#    return output
+    
 
 
 # --- TIME --- #
