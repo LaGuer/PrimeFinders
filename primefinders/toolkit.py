@@ -69,7 +69,7 @@ def read_advance(*filenames, **kwargs):
 
 
 
-#def convert(markdown_path):
+# def convert(markdown_path):
 #    """Convert a Markdown file to a reStructuredText file with the pypandoc"""
 #    try:
 #        import pypandoc
