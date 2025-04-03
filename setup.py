@@ -12,7 +12,7 @@ from setuptools import setup, find_packages
 setup(name='primefinders',
       version='0.0.1',
       description='Python library identifying prime numbers',
-      long_description=LONG_DESCRIPTION,
+      # long_description=LONG_DESCRIPTION,
       author='LaGuer',
       url='https://github.com/LaGuer/PrimeFinders',
       license='GNU General Public License v3.0',
