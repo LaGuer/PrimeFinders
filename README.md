@@ -3,6 +3,10 @@
 [![Generic badge](https://img.shields.io/badge/github-primefinders-blue.svg)](https://github.com/LaGuer/primefinders) 
 [![PyPI version](https://badge.fury.io/py/primefinders.svg)](https://badge.fury.io/py/primefinders) 
 [![Build Status](https://travis-ci.org/LaGuer/PrimeFinders.svg?branch=master)](https://travis-ci.org/LaGuer/PrimeFinders) 
+
+[![Code Coverage](https://github.com/LaGuer/PrimeFinders/actions/workflows/code-coverage.yml/badge.svg)](https://github.com/LaGuer/PrimeFinders/actions/workflows/code-coverage.yml) 
+[![Code Analysis](https://github.com/LaGuer/PrimeFinders/actions/workflows/code-analysis.yml/badge.svg)](https://github.com/LaGuer/PrimeFinders/actions/workflows/code-analysis.yml)
+
 [![codecov](https://codecov.io/gh/LaGuer/PrimeFinders/branch/master/graph/badge.svg)](https://codecov.io/gh/LaGuer/primefinders) 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/cd8f2a41eb254ed99e59722a967984ae)](https://www.codacy.com/app/LaGuer/PrimeFinders?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LaGuer/PrimeFinders&amp;utm_campaign=Badge_Grade)
  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2647719.svg)](https://doi.org/10.5281/zenodo.2647719)
